@@ -46,7 +46,7 @@ if servicestate == "CRITICAL"                                       #service goe
 	.set("type","exec")             
 	.set("username","root")
 	.set("password","Flint@01")
-	.set("command"," mysql -h "192.168.1.164" -u "root" "-pFlint@01" "information_schema" <"resolve.txt"")     #Mysql connection resolution.
+	.set("command"," mysql -uroot -pFlint@01 -e 'use information_schema; set global Max_connections=20; Flush Hosts;'")     #Mysql connection resolution.
 	.set("timeout",60000)
 	.sync
 
