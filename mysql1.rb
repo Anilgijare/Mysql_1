@@ -1,5 +1,5 @@
 
-g.info("input is:"+ @input.to_s)
+log.info("input is:"+ @input.to_s)
 
 hostname=                  @input.get("hostname")
 servicestate=              @input.get("servicestate")
